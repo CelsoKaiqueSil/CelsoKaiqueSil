@@ -18,8 +18,14 @@ def validate():
     for ref in refs:
         assert not ref.startswith("http"), "Use local profile imagery"
         assert (ROOT / ref).is_file(), ref
-    assert len(readme.splitlines()) <= 80, "Keep the profile concise"
-    assert readme.count("### [") == 4
+    assert len(readme.splitlines()) <= 130, "Keep expanded details concise"
+    assert readme.count("<details>") == readme.count("</details>") == 5
+    assert readme.count("<summary>") == readme.count("</summary>") == 5
+    assert readme.index("## Projetos") < readme.index("!["), "Projects must precede decorative images"
+    for repo in ("coreops-noc-dashboard", "service-desk-analytics",
+                 "zabbix-reporting-pipeline", "fortiview-excel-automation"):
+        overview = readme.split("## Por dentro das entregas")[0]
+        assert f"github.com/CelsoKaiqueSil/{repo}" in overview, repo
     assert "shields.io" not in readme
     assert "homologa\u00e7\u00e3o no Desktop" in readme
     print("Profile validated: five PNG assets and four projects.")
