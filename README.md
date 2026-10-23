@@ -15,15 +15,24 @@
 <h3 align="center">Dados operacionais transformados em indicadores, automações e decisões claras.</h3>
 
 <p align="center">
-  Analista de Dados Jr. e estudante de Data Science na FIAP, com experiência prática em
+  Estudante de Data Science na FIAP, com foco em Dados e BI e experiencia pratica em
   operações NOC, qualidade de dados, dashboards e automação de processos.
   <br>
   <sub>São Paulo/SP · Python · SQL · Power BI · PostgreSQL · Excel · ETL</sub>
 </p>
 
-<p align="center">
-  <img src="assets/impact.svg" alt="Impacto: relatórios de horas para minutos, 709 unidades, 1.689 links e 400 a 500 chamados por mês" width="100%">
-</p>
+## Evidencias antes de numeros
+
+Trabalho com qualidade de dados, indicadores e automacao em contexto operacional.
+Os repositorios abaixo sao demonstracoes independentes, com entradas sinteticas,
+testes e resultados reproduziveis. Nao representam volume atual de clientes nem
+benchmark de economia de tempo. Meu cargo formal e o escopo de cada trabalho
+devem ser distinguidos das competencias demonstradas no portfolio.
+
+[Abrir demonstracao CoreOps](https://celsokaiquesil.github.io/coreops-noc-dashboard/) ·
+[Conferir resultados e limites](https://github.com/CelsoKaiqueSil/coreops-noc-dashboard/blob/main/docs/IMPACT_EVIDENCE.md)
+
+![Previa sintetica do projeto principal](https://raw.githubusercontent.com/CelsoKaiqueSil/coreops-noc-dashboard/main/docs/images/preview.png)
 
 ## Projetos selecionados
 
@@ -57,6 +66,14 @@
     </td>
   </tr>
 </table>
+
+## Estudos complementares
+
+- [Central de Relatorios](https://github.com/CelsoKaiqueSil/coreops-noc-dashboard/blob/main/docs/REPORT_CENTER_CASE_STUDY.md): selecao de cliente e periodo, conferencia, qualidade das fontes e rastreabilidade. Estudo de arquitetura, nao publicacao do sistema privado.
+- [Service Desk no Power BI](https://github.com/CelsoKaiqueSil/service-desk-analytics/tree/main/powerbi): projeto PBIP com modelo estrela, medidas DAX, calendario e paginas de resumo/detalhe. Homologacao nativa no Desktop ainda pendente; previa Python nao e captura Power BI.
+
+Os quatro projetos tem instrucoes para Windows/Linux e CI. Integracoes reais,
+SharePoint e ambientes de producao nao estao implicitamente incluidos na demonstracao.
 
 ## Ferramentas
 
