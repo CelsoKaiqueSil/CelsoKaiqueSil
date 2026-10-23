@@ -10,7 +10,8 @@ analíticas reais das amostras sintéticas continuam identificadas nos READMEs.
 
 ## Arquivos
 
-- `assets/header.png`: cabeçalho do perfil.
+- `assets/header-v2.png`: cabeçalho atual, com tipografia mais clara e brilho controlado.
+- `assets/header.png`: versão anterior, preservada sem uso no README.
 - `assets/projects/`: quatro capas dos projetos.
 - Cada projeto mantém sua cópia em `docs/images/cover.png`.
 
@@ -44,4 +45,17 @@ Original premium technology GitHub project cover, panoramic horizontal 3:1. Part
 
 ```text
 Create a premium GitHub portfolio project cover, panoramic 3:1 horizontal. Original dark midnight background with luminous cyan and blue flowing 3D dotted data waves in the lower third, small violet accents and connected analytical data nodes. Far right: elegant glass magnifying lens revealing an abstract spreadsheet and small bar chart, cohesive with a professional data analytics portfolio. Left two-thirds clean dark negative space, strong modern sans-serif typography. Exact text only: large white "FORTIVIEW"; cyan secondary line "EXCEL AUTOMATION"; pale grey line "Planilhas · Histórico · Automação"; small bottom-left "Python  /  openpyxl  /  PowerShell". Correct Portuguese accents, ample margins, razor sharp legible text, no overlaps. No other words or numbers, no real logos, no real statistics, no person, robot hand, UI cards or watermarks. A polished technological illustration, not a real application screenshot. Match an existing CELSO KAIQUE banner with white name, cyan data waves and an analytical lens.
+```
+
+## Revisão do cabeçalho
+
+O cabeçalho foi refinado a partir da captura enviada pelo autor: nome e subtítulo
+preservados, tecnologias em uma linha secundária e lupa analítica com contraste
+controlado. A revisão altera somente o banner; as capas dos projetos permanecem.
+A imagem foi editada com a ferramenta integrada de geração de imagens.
+
+### Prompt da revisão
+
+```text
+Use case: style-transfer. Improve the GitHub profile BANNER visible inside the supplied screenshot. The screenshot is a reference/edit target ONLY for its inner banner; discard all GitHub chrome, filename, edit icon, page margins and surrounding UI. Output only the finished standalone wide horizontal 3:1 banner, high resolution. Keep the exact identity "Celso Kaique" and the exact subtitle "Dados, BI e Automação", correctly accented Portuguese. Elevate the current sparse layout into a confident professional portfolio for a data analyst, BI and automation specialist: better typography hierarchy, deliberate balance of negative space, stronger clean name in white on the left, subtitle in pale cool grey, restrained cyan accent. Add a small subtle third line "Python · SQL · Power BI · Excel". Dark charcoal-to-midnight background, clean and rich rather than mottled. Right-hand third has a refined small analytical magnifying lens revealing a simple cyan bar-and-line chart, elegantly integrated into a low-contrast flowing data-point wave along the bottom edge. The visual stays secondary to the name. Thin precise data connections, controlled cyan highlights, no violet rainbow, no overexposed neon, no lens flare, no fog, no bokeh blobs, no floating panels, no huge text or oversized 3D objects, no extra text, fake KPI numbers, logos or watermarks. The visual inspiration is analytical data waves and connected charts, but the execution is restrained, mature and technically polished, not flashy stock cyberpunk. Large comfortable safe margins, excellent contrast, all text fully visible and readable at GitHub README width. Name and subtitle should occupy approximately the left 50 percent; right illustration approximately 30 percent, with breathing room between. Preserve the original person's name, language and professional focus.
 ```
