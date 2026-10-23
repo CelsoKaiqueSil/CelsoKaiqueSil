@@ -9,7 +9,23 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def validate():
-    data = (ROOT / "assets/header.png").read_bytes()
+    assets = [ROOT / "assets/header.png", *sorted((ROOT / "assets/projects").glob("*.png"))]
+    assert len(assets) == 5, "Expected a header and four project covers"
+    for path in assets:
+        validate_png(path)
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    for ref in re.findall(r"!\[[^\]]*\]\(([^)]+)\)", readme):
+        assert not ref.startswith("http"), "Use local profile imagery"
+        assert (ROOT / ref).is_file(), ref
+    assert len(readme.splitlines()) <= 80, "Keep the profile concise"
+    assert readme.count("### [") == 4
+    assert "shields.io" not in readme
+    assert "homologa\u00e7\u00e3o no Desktop" in readme
+    print("Profile validated: five PNG assets and four projects.")
+
+
+def validate_png(path):
+    data = path.read_bytes()
     assert data[:8] == b"\x89PNG\r\n\x1a\n", "Invalid PNG signature"
     assert len(data) < 4_000_000, "Keep the header lightweight"
     offset, ended = 8, False
@@ -26,15 +42,7 @@ def validate():
     assert ended and offset == len(data), "Truncated PNG or trailing bytes"
     width, height = struct.unpack(">II", data[16:24])
     assert width >= 1200 and 2.8 <= width/height <= 3.2
-    readme = (ROOT / "README.md").read_text(encoding="utf-8")
-    for ref in re.findall(r"!\[[^\]]*\]\(([^)]+)\)", readme):
-        assert not ref.startswith("http"), "Use local profile imagery"
-        assert (ROOT / ref).is_file(), ref
-    assert len(readme.splitlines()) <= 70, "Keep the profile concise"
-    assert readme.count("### [") == 4
-    assert "shields.io" not in readme
-    assert "homologa\u00e7\u00e3o no Desktop" in readme
-    print(f"Profile validated: {width}x{height} PNG, {len(data):,} bytes; four projects.")
+    print(f"PNG validated: {path.name}, {width}x{height}, {len(data):,} bytes.")
 
 
 if __name__ == "__main__":
