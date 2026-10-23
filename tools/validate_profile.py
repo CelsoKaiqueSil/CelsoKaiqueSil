@@ -9,12 +9,13 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def validate():
-    assets = [ROOT / "assets/header.png", *sorted((ROOT / "assets/projects").glob("*.png"))]
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    refs = re.findall(r"!\[[^\]]*\]\(([^)]+)\)", readme)
+    assets = [ROOT / ref for ref in refs]
     assert len(assets) == 5, "Expected a header and four project covers"
     for path in assets:
         validate_png(path)
-    readme = (ROOT / "README.md").read_text(encoding="utf-8")
-    for ref in re.findall(r"!\[[^\]]*\]\(([^)]+)\)", readme):
+    for ref in refs:
         assert not ref.startswith("http"), "Use local profile imagery"
         assert (ROOT / ref).is_file(), ref
     assert len(readme.splitlines()) <= 80, "Keep the profile concise"

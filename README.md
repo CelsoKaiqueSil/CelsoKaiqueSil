@@ -1,4 +1,4 @@
-![Celso Kaique | Dados, BI e Automação](assets/header.png)
+![Celso Kaique | Dados, BI e Automação](assets/header-v2.png)
 
 Estudante de Data Science na FIAP, com experiência em operações NOC.
 Meu foco é análise de dados, Business Intelligence e automação de processos:
